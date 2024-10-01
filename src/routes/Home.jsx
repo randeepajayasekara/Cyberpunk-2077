@@ -15,9 +15,9 @@ export default function Home() {
 
   return (
     <>
-        <h1>Welcome to Halo Waypoint</h1>
+        <h1 className='text-sky-400'>Welcome to Halo Waypoint</h1>
         <form onSubmit={(e)=>handleAdd(e)}>
-            <input type='email' name='title' placeholder='youremail@example.com' />
+            <input type='email' name='title' placeholder='youremail@example.com' className='mb-2.5' />
             <button>Submit</button>
         </form>
 
