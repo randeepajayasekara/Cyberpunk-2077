@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "halo-waypoint-concept",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
