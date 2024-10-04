@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+.header {
+  position: sticky;
+  top: 0;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 1100px;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Comfortaa", sans-serif;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-button {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 32px;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 32px;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dropbtn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dropdown-content {
+  margin-top: 2px;
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  /*background-color: rgba(255, 255, 255, 0.6);*/
+  background-image: linear-gradient(45deg, #6b00b6, #ff6ec4);
+  color: #ffffff;
+  
+}
+
+.dropbtn-one {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.dropbtn-two {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main-button {
+  background: linear-gradient(45deg, #6b00b6, #ff6ec4);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.main-button:hover {
+  background: linear-gradient(45deg, #ff6ec4, #6b00b6);
+}
+
