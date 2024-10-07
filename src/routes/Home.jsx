@@ -1,28 +1,103 @@
-import React from 'react'
-import {database} from "../firebase";
-import {addDoc, collection, doc} from 'firebase/firestore';
-import Parallax_Img from '../assets/parallax.png';
+import React, { useRef } from "react";
+import "../components/styles/home.css";
+
+import { database } from "../firebase";
+import { addDoc, collection, doc } from "firebase/firestore";
+
+import IntroVideo from "../assets/Halo_Trailer.mp4";
+import BlackHoleVideo from "../assets/public_blackhole.webm";
+import InfiniteImg from '../assets/infinite_img.png';
+import MasterChief from '../assets/master_chief_collection.png';
+import Paramount from '../assets/paramount_logo.png';
 
 export default function Home() {
+  const handleAdd = (e) => {
+    e.preventDefault();
 
-    const handleAdd = (e) => {
-        e.preventDefault()
-
-        const val = doc(database,"newsletter",'data')
-        const collectinVal = collection(val,"email")
-        addDoc(collectinVal,{title:e.target.title.value})
-        alert(":)")
-    }
+    const val = doc(database, "newsletter", "data");
+    const collectinVal = collection(val, "email");
+    addDoc(collectinVal, { title: e.target.title.value });
+    alert(":)");
+  };
 
   return (
     <div>
 
-        {/*<h1 className=" text-5xl font-bold bg-gradient-to-r from-zinc-600 via-slate-500 to-green-400 text-transparent bg-clip-text text-center p-8">Welcome to Halo Waypoint</h1>
-        <form onSubmit={(e)=>handleAdd(e)} className='justify-center'>
-            <input classname="flex items-center" type='email' name='title' placeholder='email@example.com' required/> <br/>
-            <button className="bg-sky-500 hover:bg-sky-700 rounded-full py-6 px-8 text-white transition ease-in-out delay-150 hover:-translate-y-1">Submit</button>
-        </form>*/}
+      <div className="video-clip-upper"></div>
+      <div className="rounded-lg">
+        <video className="starter-video" autoPlay loop muted>
+          <source src={IntroVideo} type="video/mp4" />
+          Your browser does not support the video functionality.
+        </video>
+      </div>
+      <div className="video-clip-below"></div>
 
+      <div className="clip-section">
+        
+      </div>
+
+      <div className="second-video">
+        <video className="black-hole-video" autoPlay loop muted>
+          <source src={BlackHoleVideo} type="video/mp4" />
+          Black Hole.
+        </video>
+      </div>
+
+      <div className="infinite-page">
+        <div className="infinite-card" >
+          <img src={InfiniteImg} className="card-image" />
+          <div className="card-content">
+            <p className="upper-header">Infitism</p>
+            <h3 className="card-header">Halo Infinite</h3>
+            <p className="card-description">
+              Now is the time for a clash of champions! Relive the battles you fought as humanity’s champions in the new Community Reach playlist, bringing you back to iconic battles and maps from Halo: Reach. Build on your Banished Spartan look with the new Emissary armor in a new Operation Pass, and upgrade to the Premium Pass to obtain the Reavian Claw weapon model and Falling Flame weapon coating.
+            </p>
+          </div> 
+        </div> 
+      </div>
+
+      <div className="infinite-page">
+        <div className="infinite-card">
+          <img src={MasterChief} className="card-image" />
+          <div className="card-content">
+            <p className="upper-header">One Epic Saga</p>
+            <h3 className="card-header">Halo : Master Chief Collection</h3>
+            <p className="card-description">
+            Halo: The Master Chief Collection offers players their own exciting journey through six games – Halo: Reach, Halo: Combat Evolved Anniversary, Halo 2: Anniversary, Halo 3, Halo 3: ODST Campaign, and Halo 4. Starting with the incredible bravery of Noble Six in Halo: Reach and ending with the rise of a new enemy in Halo 4, experience the complete Master Chief saga across a total of 67 campaign missions.
+            </p>
+          </div> 
+        </div> 
+      </div>
+
+      <div className="show-section">
+        <div className="">
+          
+          <div className="show-content">
+            <h3 className="show-header">Halo : The Series</h3>
+            <p className="show-text">
+            Dramatizing an epic 26th-century conflict between humanity and an alien threat known as the Covenant, Halo the series will weave deeply drawn personal stories with action, adventure and a richly imagined vision of the future.
+            </p>
+          </div> 
+          <div className="stream-display">
+            <h2 className="stream-text">Streaming available only on:</h2>
+            <img src={Paramount} className="stream-logo" />
+          </div>
+        </div> 
+      </div>
+
+      <div className="gear-section">
+        <p>GEAR</p>
+      </div>
+
+
+
+    
+
+      {/*<h1 className=" text-5xl font-bold bg-gradient-to-r from-zinc-600 via-slate-500 to-green-400 text-transparent bg-clip-text text-center p-8">Welcome to Halo Waypoint</h1>
+      <form onSubmit={(e)=>handleAdd(e)} className='justify-center'>
+          <input classname="flex items-center" type='email' name='title' placeholder='email@example.com' required/> <br/>
+          <button className="bg-sky-500 hover:bg-sky-700 rounded-full py-6 px-8 text-white transition ease-in-out delay-150 hover:-translate-y-1">Submit</button>
+      </form>*/}
     </div>
-  )
+  );
 }
