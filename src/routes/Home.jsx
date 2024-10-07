@@ -7,6 +7,7 @@ import BlackHoleVideo from "../assets/public_blackhole.webm";
 import InfiniteImg from '../assets/infinite_img.png';
 import MasterChief from '../assets/master_chief_collection.png';
 import Paramount from '../assets/paramount_logo.png';
+import XBOXmerch from '../assets/xboxLogoGreen_Logo.webp';
 
 export default function Home() {
 
@@ -93,7 +94,9 @@ export default function Home() {
                     ],
                   }}
                 />   
-        </div>           
+        </div> 
+        <a href='https://gear.xbox.com/pages/halo?utm_source=halowaypoint.com&utm_medium=referral&utm_campaign=&utm_content='><img src={XBOXmerch}  className="gear-logo"/></a>
+                
                      
          
       </div>

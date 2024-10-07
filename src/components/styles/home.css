@@ -247,6 +247,7 @@
 /*** Gear Section ***/
 
 .gear-section {
+    align-content: center;
     margin-top: 120px;
     height: 100vh;
     width: 100%;
@@ -306,4 +307,21 @@
        font-size: 1.8em;
 
     }
+}
+
+.gear-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 790px) {
+        width: 50%;
+    }
+}
+
+.gear-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
