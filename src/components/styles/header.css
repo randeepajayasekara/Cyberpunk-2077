@@ -23,6 +23,7 @@
   max-width: 100%;
   height: auto;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .nav-buttons {

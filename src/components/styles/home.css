@@ -235,12 +235,18 @@
     margin-left: 50px;
     height: 99px;
     width: 299px;
+    transition: transform 0.3s ease;
 
     @media (max-width: 790px) {
         margin: 0 auto;
         display: block;
 
     }
+}
+
+.stream-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 

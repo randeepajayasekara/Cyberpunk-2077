@@ -30,7 +30,7 @@ export default function Footer() {
         <footer>
             <div className='row'>
                 <div className="col">
-                    <img src={FooterLogo} alt='Logo' className='footer-logo' />
+                    <a onClick={() => document.getElementById('trailer-video').scrollIntoView({ behavior: 'smooth'})}><img src={FooterLogo} alt='Logo' className='footer-logo' /></a>
                     <p>The series that changed gaming forever, featuring six legendary titles. enjoy iconic halo game moments, collected in a single integrated experience</p>            
                 </div>
                 <div className="col">
@@ -44,15 +44,15 @@ export default function Footer() {
                 <div className="col">
                   <h3><b>Links</b> <div className="underline"><span></span></div> </h3>
                   <ul>
-                    <li><a href='#'>Halo: Infinite</a></li>
-                    <li><a href='#'>Halo: Masterchief Collection</a></li>
-                    <li><a href='#'>Halo: The Series</a></li>
-                    <li><a href='#'>Gear Merchandise</a></li>
-                    <li><a href='#'>Support Center</a></li>
+                    <li><a onClick={() => document.getElementById('infinite-section-target').scrollIntoView({ behavior: 'smooth'})}>Halo: Infinite</a></li>
+                    <li><a onClick={() => document.getElementById('masterchief-section-target').scrollIntoView({ behavior: 'smooth'})}>Halo: Masterchief Collection</a></li>
+                    <li><a onClick={() => document.getElementById('show-series-target').scrollIntoView({ behavior: 'smooth'})}>Halo: The Series</a></li>
+                    <li><a onClick={() => window.open('https://gear.xbox.com/pages/halo?utm_source=halowaypoint.com&utm_medium=referral&utm_campaign=&utm_content=', '_blank')}>Gear Merchandise</a></li>
+                    <li><a onClick={() => window.open('https://support.halowaypoint.com/hc/en-us', '_blank')}>Support Center</a></li>
                   </ul>
                 </div>
                 <div className="col">
-                  <h3><b>Newsletter</b> <div className="underline"><span></span></div> </h3>
+                  <h3><b>Newsletter</b> <div className="underline" id='subscribe-section-target'><span></span></div> </h3>
                   <form onSubmit={(e)=>handleAdd(e)}>
                     <AiOutlineMail className='footer-mail-logo' />
                     <input type='email' name='title' placeholder='Enter your Email' required/>

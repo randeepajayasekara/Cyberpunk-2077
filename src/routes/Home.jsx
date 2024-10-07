@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="video-clip-upper"></div>
       <div className="rounded-lg">
-        <video className="starter-video" autoPlay loop muted>
+        <video className="starter-video" id="trailer-video" autoPlay loop muted>
           <source src={IntroVideo} type="video/mp4" />
           Your browser does not support the video functionality.
         </video>
@@ -35,8 +35,8 @@ export default function Home() {
       </div>
 
       <div className="infinite-page">
-        <div className="infinite-card" >
-          <img src={InfiniteImg} className="card-image" />
+        <div className="infinite-card" id="infinite-section-target" >
+          <img src={InfiniteImg} className="card-image" onClick={() => window.open('https://www.halowaypoint.com/en-gb/halo-infinite', '_blank')} />
           <div className="card-content">
             <p className="upper-header">Infitism</p>
             <h3 className="card-header">Halo Infinite</h3>
@@ -47,9 +47,9 @@ export default function Home() {
         </div> 
       </div>
 
-      <div className="infinite-page">
-        <div className="infinite-card">
-          <img src={MasterChief} className="card-image" />
+      <div className="infinite-page" id="masterchief-section-target">
+        <div className="infinite-card" >
+          <img src={MasterChief} className="card-image" onClick={() => window.open('https://www.halowaypoint.com/en-gb/halo-the-master-chief-collection', '_blank')} />
           <div className="card-content">
             <p className="upper-header">One Epic Saga</p>
             <h3 className="card-header">Halo : Master Chief Collection</h3>
@@ -60,7 +60,7 @@ export default function Home() {
         </div> 
       </div>
 
-      <div className="show-section">
+      <div className="show-section" id="show-series-target">
         <div className="">
           
           <div className="show-content">
@@ -71,7 +71,7 @@ export default function Home() {
           </div> 
           <div className="stream-display">
             <h2 className="stream-text">Streaming available only on:</h2>
-            <img src={Paramount} className="stream-logo" />
+            <a href="https://www.paramountplus.com/intl/?ftag=PPM-06-10bag1d" target="_blank"><img src={Paramount} className="stream-logo" /></a>
           </div>
         </div> 
       </div>
