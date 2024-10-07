@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import "../components/styles/home.css";
-
 import { database } from "../firebase";
 import { addDoc, collection, doc } from "firebase/firestore";
 
@@ -11,14 +10,6 @@ import MasterChief from '../assets/master_chief_collection.png';
 import Paramount from '../assets/paramount_logo.png';
 
 export default function Home() {
-  const handleAdd = (e) => {
-    e.preventDefault();
-
-    const val = doc(database, "newsletter", "data");
-    const collectinVal = collection(val, "email");
-    addDoc(collectinVal, { title: e.target.title.value });
-    alert(":)");
-  };
 
   return (
     <div>
@@ -86,18 +77,28 @@ export default function Home() {
       </div>
 
       <div className="gear-section">
-        <p>GEAR</p>
+        <h3 className="gear-header">HALO GEAR SHOP</h3>
+        <div className="gear-text">
+          <Typewriter
+                  className="gear-text"
+                  options={{
+                    autoStart: true,
+                    loop: true,
+                    delay: 40,
+                    strings: [
+                      "Premium Merchandise, New Releases and exclusive collectibles.",
+                      "Gear up and get ready to launch into the Halo universe with our latest collections.",
+                      " Fly your gaming colors and show off your fandom.",
+                      "Shop the Halo Championship Launch Collection",
+                      "And.. Gear up for your next expedition.",
+                    ],
+                  }}
+                />   
+        </div>           
+                     
+         
       </div>
 
-
-
-    
-
-      {/*<h1 className=" text-5xl font-bold bg-gradient-to-r from-zinc-600 via-slate-500 to-green-400 text-transparent bg-clip-text text-center p-8">Welcome to Halo Waypoint</h1>
-      <form onSubmit={(e)=>handleAdd(e)} className='justify-center'>
-          <input classname="flex items-center" type='email' name='title' placeholder='email@example.com' required/> <br/>
-          <button className="bg-sky-500 hover:bg-sky-700 rounded-full py-6 px-8 text-white transition ease-in-out delay-150 hover:-translate-y-1">Submit</button>
-      </form>*/}
     </div>
   );
 }
