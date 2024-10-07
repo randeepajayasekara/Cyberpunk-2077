@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <NotFound />,
+    errorElement: <App />,
     children: [
       {
         path: "/halo-infinite-gameplay",
