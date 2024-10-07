@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import "../components/styles/home.css";
-import { database } from "../firebase";
-import { addDoc, collection, doc } from "firebase/firestore";
+import Typewriter from "typewriter-effect";
 
 import IntroVideo from "../assets/Halo_Trailer.mp4";
 import BlackHoleVideo from "../assets/public_blackhole.webm";
